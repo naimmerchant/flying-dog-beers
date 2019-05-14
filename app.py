@@ -4,29 +4,29 @@ import dash_html_components as html
 import plotly.graph_objs as go
 
 ########### Set up the chart
-beers=['Chesapeake Stout', 'Snake Dog IPA', 'Imperial Porter', 'Double Dog IPA']
-ibu_values=[35, 60, 85, 75]
-abv_values=[5.4, 7.1, 9.2, 4.3]
-color1='lightred'
-color2='darkblue'
+beers=['Spring', 'Summer', 'Fall', 'Winter']
+ibu_values=[20, 30, 15, 8]
+abv_values=[10, 15, 7, 2]
+color1='red'
+color2='blue'
 
 bitterness = go.Bar(
     x=beers,
     y=ibu_values,
-    name='IBU',
+    name='High Temp',
     marker={'color':color1}
 )
 alcohol = go.Bar(
     x=beers,
     y=abv_values,
-    name='ABV',
+    name='Low Temp',
     marker={'color':color2}
-)
+)Stout
 
 beer_data = [bitterness, alcohol]
 beer_layout = go.Layout(
     barmode='group',
-    title = 'Beer Comparison'
+    title = 'Weather Comparison'
 )
 
 beer_fig = go.Figure(data=beer_data, layout=beer_layout)
