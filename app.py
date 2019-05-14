@@ -21,7 +21,7 @@ alcohol = go.Bar(
     y=abv_values,
     name='Low Temp',
     marker={'color':color2}
-)Stout
+)
 
 beer_data = [bitterness, alcohol]
 beer_layout = go.Layout(
